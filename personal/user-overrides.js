@@ -154,4 +154,7 @@ user_pref("network.trr.max-fails", 5); // lower max attempts to use DoH
 user_pref("geo.provider.use_geoclue", false); // [LINUX]
 user_pref("pdfjs.defaultZoomValue", "page-width"); // PDF zoom level
 
-
+/** OVERRIDES ***/
+user_pref("network.trr.mode", 0); // disable TRR; DoH handled by router
+user_pref("browser.contentblocking.category", "custom"); // strict forces cookieBehavior=5, breaking Azure AD
+user_pref("network.cookie.cookieBehavior", 0); // accept all cookies; Azure AD requires cross-site cookies
